@@ -8,9 +8,9 @@ pipeline {
         label 'agent'
     }
 
-//    environment {
-//        scannerHome = tool 'SonarQube'
-//    }
+    environment {
+        scannerHome = tool 'SonarQube Scanner'
+    }
 
     stages {
         stage('Get Code') {
