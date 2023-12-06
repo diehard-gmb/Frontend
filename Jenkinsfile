@@ -21,7 +21,7 @@ pipeline {
 
         stage('Unit tests') {
             steps {
-                sh "pip3 install -r requirements.txt"
+                sh "pip3 install -r requirements.txt --break-system-packages"
                 sh "python3 -m pytest --cov=. --cov-report xml:test-results/coverage.xml --junitxml=test-results/pytest-report.xml"
             }
         }
